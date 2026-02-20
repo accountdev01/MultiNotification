@@ -1,32 +1,99 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# --------------------------------------------------------------------
+# 1. Golang Artifacts
+# --------------------------------------------------------------------
+# Binaries and plugins
+bin/
+out/
+dist/
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# Test & Coverage
 *.test
-
-# Code coverage profiles and other test artifacts
 *.out
-coverage.*
 *.coverprofile
 profile.cov
+coverage.txt
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# Tools & Reloading (e.g., Air)
+tmp/
+vendor/
 
-# Go workspace file
+# Go Workspace
 go.work
 go.work.sum
 
-# env file
-.env
+# --------------------------------------------------------------------
+# 2. Next.js & Node.js
+# --------------------------------------------------------------------
+# Build output
+.next/
+out/
+build/
+dist/
 
-# Editor/IDE
-# .idea/
-# .vscode/
+# Dependencies
+node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js specific
+next-env.d.ts
+.expo/
+.eslintcache
+
+# --------------------------------------------------------------------
+# 3. Environment & Security (High Priority)
+# --------------------------------------------------------------------
+# Never commit secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Database & Keys
+*.pem
+*.key
+*.pub
+*.db
+*.sqlite
+
+# --------------------------------------------------------------------
+# 4. IDE & Editor Specifics
+# --------------------------------------------------------------------
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains (GoLand, WebStorm)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Other
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# --------------------------------------------------------------------
+# 5. Docker & DevOps (Optional but Recommended)
+# --------------------------------------------------------------------
+.docker/
+*.log
+docker-compose.override.yml
